@@ -1,4 +1,4 @@
-- + * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -129,12 +129,28 @@ a {
   align-items: center;
   padding: 0 16px;
   min-width: 256px;
+  transition: all 0.3s ease;
+}
+
+.search-box:hover {
+  background: #263344;
+}
+
+.search-box:focus-within {
+  background: #263344;
+  box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.3);
 }
 
 .search-box svg {
   width: 15px;
   height: 15px;
   fill: #64748b;
+  flex-shrink: 0;
+  transition: fill 0.3s ease;
+}
+
+.search-box:focus-within svg {
+  fill: #0066ff;
 }
 
 .search-box input {
@@ -145,10 +161,21 @@ a {
   padding: 13px;
   width: 100%;
   font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  color: #f1f5f9;
 }
 
 .search-box input::placeholder {
   color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.search-box input:focus::placeholder {
+  color: #94a3b8;
 }
 
 .nav-icons {
@@ -1205,7 +1232,7 @@ a {
   color: #475569;
 }
 
-/* Responsive - Enhanced for all 4 pages */
+/* Responsive - Enhanced for all pages with search box */
 
 /* Large tablets and small desktops */
 @media (max-width: 1200px) {
@@ -1236,6 +1263,11 @@ a {
 
   .newsletter-input {
     min-width: 250px;
+  }
+
+  /* Search box responsive */
+  .search-box {
+    min-width: 220px;
   }
 }
 
@@ -1395,11 +1427,17 @@ a {
 
   .search-box {
     min-width: 160px;
+    padding: 0 12px;
   }
 
   .search-box input {
     font-size: 12px;
     padding: 10px;
+  }
+
+  .search-box svg {
+    width: 14px;
+    height: 14px;
   }
 
   .nav-icon {
@@ -1932,6 +1970,65 @@ a {
 
   .total-final {
     font-size: 14px;
+  }
+
+  /* Search box small mobile */
+  .search-box {
+    min-width: 140px;
+    padding: 0 10px;
+    border-radius: 6px;
+  }
+
+  .search-box input {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .search-box svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+  .search-box {
+    min-width: 120px;
+    padding: 0 8px;
+  }
+
+  .search-box input {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .search-box svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .nav-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-icon svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
