@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Collection - SOLE.VN</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="collection-header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 18 20">
+                <path
+                  d="M9 0L0 5v10l9 5 9-5V5L9 0zm0 2.5L15 6v8l-6 3.33L3 14V6l6-3.5z"
+                />
+              </svg>
+            </div>
+            <span class="logo-text">SOLE.VN</span>
+          </a>
+          <nav class="nav-links">
+            <a href="coming-soon.html">New Arrivals</a>
+            <a href="coming-soon.html">Best Sellers</a>
+            <a href="coming-soon.html">Brands</a>
+            <a href="coming-soon.html">Sale</a>
+          </nav>
+        </div>
+        <div class="nav-right">
+          <div class="search-box">
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+            <input type="text" placeholder="Search sneakers..." />
+          </div>
+          <div class="nav-icons">
+            <a href="coming-soon.html" class="nav-icon">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M10 2a6 6 0 0 0-6 6v3.586l-.707.707A1 1 0 0 0 4 14h12a1 1 0 0 0 .707-1.707L16 11.586V8a6 6 0 0 0-6-6zM10 18a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z"
+                />
+              </svg>
+            </a>
+            <a href="coming-soon.html" class="nav-icon">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 14a8 8 0 0 1-6.32-3.16 5 5 0 0 1 12.64 0A8 8 0 0 1 10 17z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="collection-main">
+      <!-- Sidebar Filters -->
+      <aside class="filters-sidebar">
+        <div class="filters-header">
+          <h3>Filters</h3>
+          <span class="items-count">842 items matching</span>
+        </div>
+
+        <!-- Brand Filter -->
+        <div class="filter-section">
+          <div class="filter-title">
+            <span>Brand</span>
+            <svg viewBox="0 0 10 6" width="10" height="6">
+              <path
+                d="M1 1l4 4 4-4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div class="filter-options">
+            <label class="filter-checkbox">
+              <input type="checkbox" checked />
+              <span class="checkmark"></span>
+              <span>Nike</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              <span>Adidas</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              <span>New Balance</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              <span>Jordan</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-section">
+          <div class="filter-title">
+            <span>Price Range</span>
+          </div>
+          <div class="price-slider">
+            <div class="slider-track">
+              <div class="slider-fill"></div>
+              <div class="slider-thumb left"></div>
+              <div class="slider-thumb right"></div>
+            </div>
+            <div class="price-labels">
+              <span>$100</span>
+              <span>$500+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size Filter -->
+        <div class="filter-section">
+          <div class="filter-title">
+            <span>Size (EU)</span>
+          </div>
+          <div class="size-grid">
+            <button class="size-btn">38</button>
+            <button class="size-btn">39</button>
+            <button class="size-btn">40</button>
+            <button class="size-btn">41</button>
+            <button class="size-btn active">42</button>
+            <button class="size-btn">43</button>
+            <button class="size-btn">44</button>
+            <button class="size-btn">45</button>
+            <button class="size-btn">46</button>
+          </div>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-section">
+          <div class="filter-title">
+            <span>Color</span>
+          </div>
+          <div class="color-options">
+            <button class="color-btn black active"></button>
+            <button class="color-btn white"></button>
+            <button class="color-btn blue"></button>
+            <button class="color-btn red"></button>
+            <button class="color-btn green"></button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Grid -->
+      <section class="products-area">
+        <div class="products-header">
+          <h1>All Sneakers</h1>
+          <p>
+            Step into the future with our curated high-performance collection.
+          </p>
+          <div class="sort-container">
+            <span>Sort by</span>
+            <button class="sort-btn">
+              Latest Drops
+              <svg viewBox="0 0 10 6" width="10" height="6">
+                <path
+                  d="M1 1l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="active-filters">
+          <span class="filter-tag">
+            Nike
+            <svg viewBox="0 0 10 10" width="10" height="10">
+              <path
+                d="M2 2l6 6M8 2l-6 6"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+            style="cursor: pointer"
+          >
+            <div class="product-image">
+              <img
+                src="images/6.png"
+                alt="RED PHANTOM 01"
+                class="product-img"
+              />
+              <button class="wishlist-btn" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  window.location.href = 'checkout.html';
+                "
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">RED PHANTOM 01</span>
+                <span class="product-price">$180.00</span>
+              </div>
+              <div class="product-meta">Running • 2 Colors</div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+            style="cursor: pointer"
+          >
+            <div class="product-image">
+              <img
+                src="images/7.png"
+                alt="SOLAR FLARE HI"
+                class="product-img"
+              />
+              <span class="product-badge">LIMITED</span>
+              <button class="wishlist-btn" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  window.location.href = 'checkout.html';
+                "
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">SOLAR FLARE HI</span>
+                <span class="product-price">$210.00</span>
+              </div>
+              <div class="product-meta">Basketball • 1 Color</div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+            style="cursor: pointer"
+          >
+            <div class="product-image">
+              <img
+                src="images/8.png"
+                alt="NOVA GLIDE WHITE"
+                class="product-img"
+              />
+              <button class="wishlist-btn" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  window.location.href = 'checkout.html';
+                "
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">NOVA GLIDE WHITE</span>
+                <span class="product-price">$165.00</span>
+              </div>
+              <div class="product-meta">Lifestyle • 4 Colors</div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+            style="cursor: pointer"
+          >
+            <div class="product-image">
+              <img src="images/9.png" alt="DEEP SEA PRO" class="product-img" />
+              <button class="wishlist-btn" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  window.location.href = 'checkout.html';
+                "
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">DEEP SEA PRO</span>
+                <span class="product-price">$240.00</span>
+              </div>
+              <div class="product-meta">Pro-Series • 1 Color</div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+            style="cursor: pointer"
+          >
+            <div class="product-image">
+              <img
+                src="images/10.png"
+                alt="CYBER RUNNER V2"
+                class="product-img"
+              />
+              <button class="wishlist-btn" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  window.location.href = 'checkout.html';
+                "
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">CYBER RUNNER V2</span>
+                <span class="product-price">$195.00</span>
+              </div>
+              <div class="product-meta">Running • 3 Colors</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="collection-footer">
+      <div class="footer-content">
+        <span>© 2024 SOLE.VN INTERNATIONAL LTD.</span>
+        <div class="footer-links">
+          <a href="#">COOKIES</a>
+          <a href="#">AD CHOICE</a>
+          <a href="#">TERMS</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

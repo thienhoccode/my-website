@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RED PHANTOM 01 - SOLE.VN</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="collection-header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 18 20">
+                <path
+                  d="M9 0L0 5v10l9 5 9-5V5L9 0zm0 2.5L15 6v8l-6 3.33L3 14V6l6-3.5z"
+                />
+              </svg>
+            </div>
+            <span class="logo-text">SOLE.VN</span>
+          </a>
+          <nav class="nav-links">
+            <a href="coming-soon.html">New Arrivals</a>
+            <a href="coming-soon.html">Best Sellers</a>
+            <a href="coming-soon.html">Brands</a>
+            <a href="coming-soon.html">Sale</a>
+          </nav>
+        </div>
+        <div class="nav-right">
+          <div class="search-box">
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+            <input type="text" placeholder="Search sneakers..." />
+          </div>
+          <div class="nav-icons">
+            <a href="coming-soon.html" class="nav-icon">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M10 2a6 6 0 0 0-6 6v3.586l-.707.707A1 1 0 0 0 4 14h12a1 1 0 0 0 .707-1.707L16 11.586V8a6 6 0 0 0-6-6zM10 18a3 3 0
+                />
+              </svg>
+            </a>
+            <a href="#" class="nav-icon">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 14a8 8 0 0 1-6.32-3.16 5 5 0 0 1 12.64 0A8 8 0 0 1 10 17z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-container">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="product-collection.html">Sneakers</a>
+        <span>/</span>
+        <span class="current">RED PHANTOM 01</span>
+      </div>
+    </div>
+
+    <!-- Product Detail -->
+    <main class="product-detail">
+      <div class="product-detail-container">
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img src="images/14.png" alt="RED PHANTOM 01" id="mainImage" />
+            <button class="wishlist-btn-large">
+              <svg viewBox="0 0 20 18">
+                <path
+                  d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="gallery-thumbnails">
+            <button
+              class="thumbnail active"
+              onclick="changeImage('images/14.png')"
+            >
+              <img src="images/14.png" alt="Thumbnail 1" />
+            </button>
+            <button class="thumbnail" onclick="changeImage('images/16.png')">
+              <img src="images/16.png" alt="Thumbnail 2" />
+            </button>
+            <button class="thumbnail" onclick="changeImage('images/17.png')">
+              <img src="images/17.png" alt="Thumbnail 3" />
+            </button>
+            <button class="thumbnail" onclick="changeImage('images/18.png')">
+              <img src="images/18.png" alt="Thumbnail 4" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info-detail">
+          <div class="product-badges">
+            <span class="badge-new">NEW</span>
+            <span class="badge-trending">TRENDING</span>
+          </div>
+          <h1 class="product-title">RED PHANTOM 01</h1>
+          <p class="product-subtitle">Running • 2 Colors</p>
+
+          <div class="product-price-detail">
+            <span class="price-current">$180.00</span>
+            <span class="price-original">$220.00</span>
+            <span class="price-discount">-18%</span>
+          </div>
+
+          <p class="product-description">
+            The Cyber-Runner V3 represents the next evolution in
+            high-performance footwear. Featuring our proprietary AIR-CORE™
+            technology, this shoe delivers unmatched comfort and responsiveness
+            for urban athletes who demand the best.
+          </p>
+
+          <!-- Color Selection -->
+          <div class="option-section">
+            <div class="option-header">
+              <span>Color</span>
+              <span class="selected-option">Crimson Red</span>
+            </div>
+            <div class="color-options-detail">
+              <button
+                class="color-swatch active"
+                style="background: #dc2626"
+              ></button>
+              <button class="color-swatch" style="background: #000000"></button>
+            </div>
+          </div>
+
+          <!-- Size Selection -->
+          <div class="option-section">
+            <div class="option-header">
+              <span>Size (EU)</span>
+              <a href="#" class="size-guide">Size Guide</a>
+            </div>
+            <div class="size-options-detail">
+              <button class="size-btn-detail">38</button>
+              <button class="size-btn-detail">39</button>
+              <button class="size-btn-detail">40</button>
+              <button class="size-btn-detail">41</button>
+              <button class="size-btn-detail active">42</button>
+              <button class="size-btn-detail">43</button>
+              <button class="size-btn-detail">44</button>
+              <button class="size-btn-detail">45</button>
+              <button class="size-btn-detail">46</button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="option-section">
+            <div class="option-header">
+              <span>Quantity</span>
+            </div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="decreaseQty()">−</button>
+              <input type="number" value="1" min="1" max="10" id="quantity" />
+              <button class="qty-btn" onclick="increaseQty()">+</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="action-buttons">
+            <a href="checkout.html" class="add-to-cart-large"
+              >ADD TO CART — $180.00</a
+            >
+            <a href="checkout.html" class="buy-now-btn">BUY NOW</a>
+          </div>
+
+          <!-- Product Features -->
+          <div class="product-features">
+            <div class="feature">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+                />
+              </svg>
+              <span>Free Shipping Over $150</span>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"
+                />
+              </svg>
+              <span>30-Day Returns</span>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"
+                />
+              </svg>
+              <span>100% Authentic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Specs -->
+      <section class="product-specs">
+        <h2>Product Specifications</h2>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Weight</span>
+            <span class="spec-value">245g</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Technology</span>
+            <span class="spec-value">AIR-CORE™</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Upper Material</span>
+            <span class="spec-value">Engineered Mesh</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Sole</span>
+            <span class="spec-value">Rubber Outsole</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Closure</span>
+            <span class="spec-value">Lace-up</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Heel Height</span>
+            <span class="spec-value">32mm</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="related-grid">
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+          >
+            <div class="product-image">
+              <img
+                src="images/3.png"
+                alt="SOLAR FLARE HI"
+                class="product-img"
+              />
+              <div class="product-badge"><span>LIMITED</span></div>
+              <div class="product-wishlist">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </div>
+              <div class="product-add-btn">ADD TO CART</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">SOLAR FLARE HI</span>
+                <span class="product-price">$210.00</span>
+              </div>
+              <div class="product-meta">Basketball • 1 Color</div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+          >
+            <div class="product-image">
+              <img
+                src="images/4.png"
+                alt="NOVA GLIDE WHITE"
+                class="product-img"
+              />
+              <div class="product-wishlist">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </div>
+              <div class="product-add-btn">ADD TO CART</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">NOVA GLIDE WHITE</span>
+                <span class="product-price">$165.00</span>
+              </div>
+              <div class="product-meta">Lifestyle • 4 Colors</div>
+            </div>
+          </div>
+
+          <div
+            class="product-card"
+            onclick="window.location.href = 'product-detail.html'"
+          >
+            <div class="product-image">
+              <img src="images/5.png" alt="DEEP SEA PRO" class="product-img" />
+              <div class="product-wishlist">
+                <svg viewBox="0 0 20 18">
+                  <path
+                    d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
+                  />
+                </svg>
+              </div>
+              <div class="product-add-btn">ADD TO CART</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name-price">
+                <span class="product-name">DEEP SEA PRO</span>
+                <span class="product-price">$240.00</span>
+              </div>
+              <div class="product-meta">Pro-Series • 1 Color</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="collection-footer">
+      <div class="footer-content">
+        <span>© 2024 SOLE.VN INTERNATIONAL LTD.</span>
+        <div class="footer-links">
+          <a href="#">COOKIES</a>
+          <a href="#">AD CHOICE</a>
+          <a href="#">TERMS</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function changeImage(src) {
+        document.getElementById("mainImage").src = src;
+        document
+          .querySelectorAll(".thumbnail")
+          .forEach((t) => t.classList.remove("active"));
+        event.target.parentElement.classList.add("active");
+      }
+
+      function increaseQty() {
+        const input = document.getElementById("quantity");
+        if (input.value < 10) input.value = parseInt(input.value) + 1;
+      }
+
+      function decreaseQty() {
+        const input = document.getElementById("quantity");
+        if (input.value > 1) input.value = parseInt(input.value) - 1;
+      }
+    </script>
+  </body>
+</html>
