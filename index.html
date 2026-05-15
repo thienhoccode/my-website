@@ -1,408 +1,353 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLE.VN - Premium Sneakers</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Tier 1: Utility Bar -->
-    <div class="utility-bar">
-      <div class="utility-left">
-        <span>Free Shipping on Orders Over $150</span>
-        <a href="#">Join Membership</a>
-      </div>
-      <div class="utility-right">
-        <a href="#">Support</a>
-        <a href="#">Store Locator</a>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tủ Sách Vàng — Nhà Sách Trực Tuyến Cao Cấp</title>
+  <meta name="description" content="Tủ Sách Vàng — Khám phá hàng ngàn đầu sách chất lượng cao. Sách văn học, khoa học, kinh tế, thiếu nhi và nhiều thể loại khác." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=3" />
+  <link rel="stylesheet" href="css/components.css?v=3" />
+  <link rel="stylesheet" href="css/animations.css?v=3" />
+</head>
+<body>
 
-    <!-- Tier 2: Main Navigation -->
-    <nav class="main-nav">
-      <div class="nav-left">
-        <a href="#" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 18 20">
-              <path
-                d="M9 0L0 5v10l9 5 9-5V5L9 0zm0 2.5L15 6v8l-6 3.33L3 14V6l6-3.5z"
-              />
-            </svg>
-          </div>
-          <span class="logo-text">SOLE.VN</span>
-        </a>
-        <div class="nav-links">
-          <a href="coming-soon.html">NEW RELEASES</a>
-          <a href="coming-soon.html">MEN</a>
-          <a href="coming-soon.html">WOMEN</a>
-          <a href="coming-soon.html" class="sale">SALE</a>
-        </div>
-      </div>
-      <div class="nav-right">
-        <div class="search-box">
-          <svg viewBox="0 0 16 16">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-            />
-          </svg>
-          <input type="text" placeholder="Search sneakers..." />
-        </div>
-        <div class="nav-icons">
-          <a href="#" class="nav-icon">
-            <svg viewBox="0 0 20 20">
-              <path
-                d="M10 2a6 6 0 0 0-6 6v3.586l-.707.707A1 1 0 0 0 4 14h12a1 1 0 0 0 .707-1.707L16 11.586V8a6 6 0 0 0-6-6zM10 18a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z"
-              />
-            </svg>
-          </a>
-          <a href="#" class="nav-icon">
-            <svg viewBox="0 0 20 20">
-              <path
-                d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 14a8 8 0 0 1-6.32-3.16 5 5 0 0 1 12.64 0A8 8 0 0 1 10 17z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
+<!-- ===== TOAST NOTIFICATION ===== -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- ===== MINI CART OVERLAY ===== -->
+<div id="cart-overlay" class="cart-overlay"></div>
+<aside id="mini-cart" class="mini-cart">
+  <div class="mini-cart__header">
+    <h3>Giỏ Hàng</h3>
+    <button id="close-cart" class="mini-cart__close" aria-label="Đóng giỏ hàng">✕</button>
+  </div>
+  <div id="cart-items" class="mini-cart__items"></div>
+  <div class="mini-cart__footer">
+    <div class="mini-cart__total">
+      <span>Tổng cộng</span>
+      <span id="cart-total">0₫</span>
+    </div>
+    <a href="checkout.html" class="btn btn--primary btn--full">Thanh Toán</a>
+    <a href="cart.html" class="btn btn--outline btn--full">Xem Giỏ Hàng</a>
+  </div>
+</aside>
+
+<!-- ===== LIVE SEARCH OVERLAY ===== -->
+<div id="search-overlay" class="search-overlay">
+  <div class="search-overlay__inner">
+    <div class="search-overlay__box">
+      <span class="search-overlay__icon">⌕</span>
+      <input type="text" id="search-input" placeholder="Tìm kiếm sách, tác giả, thể loại..." autocomplete="off" />
+      <button id="close-search" aria-label="Đóng tìm kiếm">✕</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+<header id="main-header" class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__icon">📚</span>
+      <span class="logo__text">Tủ Sách <em>Vàng</em></span>
+    </a>
+    <nav class="nav" id="main-nav">
+      <a href="index.html" class="nav__link active">Trang Chủ</a>
+      <a href="catalog.html" class="nav__link">Danh Mục</a>
+      <a href="blog.html" class="nav__link">Blog Sách</a>
+      <a href="account.html" class="nav__link">Tài Khoản</a>
     </nav>
-
-    <!-- Tier 3: Category Filter -->
-    <div class="category-filter">
-      <a href="#" class="active">ALL PRODUCTS</a>
-      <a href="#">BASKETBALL</a>
-      <a href="#">RUNNING</a>
-      <a href="#">LIFESTYLE</a>
-      <a href="#">CYBER-SERIES</a>
-      <a href="#">LIMITED DROPS</a>
+    <div class="header__actions">
+      <button id="search-btn" class="icon-btn" aria-label="Tìm kiếm">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="auth.html" class="icon-btn" aria-label="Tài khoản">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <button id="cart-btn" class="icon-btn cart-icon-btn" aria-label="Giỏ hàng">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+      <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</header>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
-            />
-          </svg>
-        </div>
-        <div class="stat-content">
-          <h4>GLOBAL DELIVERY</h4>
-          <p>Fast tracking included</p>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"
-            />
-          </svg>
-        </div>
-        <div class="stat-content">
-          <h4>AUTHENTIC ONLY</h4>
-          <p>100% genuine products</p>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"
-            />
-          </svg>
-        </div>
-        <div class="stat-content">
-          <h4>30 DAY RETURNS</h4>
-          <p>Hassle-free exchange</p>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
-            />
-          </svg>
-        </div>
-        <div class="stat-content">
-          <h4>SECURE PAYMENT</h4>
-          <p>Fully encrypted transactions</p>
+<!-- ===== HERO SLIDER ===== -->
+<section class="hero" id="hero">
+  <div class="hero__slider" id="hero-slider">
+    <div class="hero__slide active" style="--bg: url('img/hero1.png')">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="hero__tag">Bộ Sưu Tập Mới 2025</span>
+        <h1 class="hero__title">Hành Trình<br/><em>Tri Thức</em> Bắt Đầu<br/>Từ Một Trang Sách</h1>
+        <p class="hero__sub">Khám phá hơn 50,000 đầu sách từ các tác giả trong và ngoài nước</p>
+        <div class="hero__cta">
+          <a href="catalog.html" class="btn btn--gold">Khám Phá Ngay</a>
+          <a href="#new-arrivals" class="btn btn--ghost">Sách Mới Nhất</a>
         </div>
       </div>
     </div>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-gradient"></div>
-      <div class="hero-gradient-2"></div>
-      <div class="hero-content">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span>JUST LANDED</span>
-          </div>
-          <h1 class="hero-title">THE NEXT<br /><span>EVOLUTION</span></h1>
-          <p class="hero-description">
-            Introducing the Cyber-Runner V3. Precision engineered for
-            high-performance city navigation with adaptive cushioning
-            technology.
-          </p>
-          <div class="hero-buttons">
-            <a href="product-collection.html" class="btn-primary">
-              SHOP COLLECTION
-              <svg viewBox="0 0 10 10"><path d="M1 5h8M6 1l4 4-4 4" /></svg>
-            </a>
-            <a href="#" class="btn-secondary">WATCH REVEAL</a>
-          </div>
-        </div>
-        <div class="hero-right">
-          <div class="hero-image-container">
-            <div class="hero-blur-circle"></div>
-            <div class="hero-shoe">
-              <img
-                src="images/1.png"
-                alt="Cyber-Runner V3"
-                class="hero-shoe-img"
-              />
-            </div>
-            <div class="hero-stat hero-stat-top">
-              <div class="hero-stat-label">Weight</div>
-              <div class="hero-stat-value">245.0g</div>
-            </div>
-            <div class="hero-stat hero-stat-bottom">
-              <div class="hero-stat-label">Technology</div>
-              <div class="hero-stat-value">AIR-CORE™</div>
-            </div>
-          </div>
+    <div class="hero__slide" style="--bg: url('img/hero2.png')">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="hero__tag">Góc Đọc Sách</span>
+        <h1 class="hero__title">Mỗi Cuốn Sách<br/>Là Một <em>Thế Giới</em><br/>Chờ Được Khám Phá</h1>
+        <p class="hero__sub">Sách văn học, kinh tế, khoa học — tất cả tại một nơi</p>
+        <div class="hero__cta">
+          <a href="catalog.html" class="btn btn--gold">Xem Bestseller</a>
+          <a href="blog.html" class="btn btn--ghost">Đọc Review Sách</a>
         </div>
       </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-section">
-      <div class="products-header">
-        <div class="products-title">
-          <h2>FEATURED DROPS</h2>
-          <p>Curated selection of our latest high-performance footwear.</p>
+    </div>
+    <div class="hero__slide" style="--bg: url('img/hero3.png')">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="hero__tag">Ưu Đãi Đặc Biệt</span>
+        <h1 class="hero__title">Giảm Đến <em>50%</em><br/>Toàn Bộ Sách<br/>Bestseller</h1>
+        <p class="hero__sub">Chương trình khuyến mãi có hạn — Đặt hàng ngay hôm nay</p>
+        <div class="hero__cta">
+          <a href="catalog.html?filter=sale" class="btn btn--gold">Mua Ngay</a>
+          <a href="#promotions" class="btn btn--ghost">Xem Ưu Đãi</a>
         </div>
-        <a href="product-collection.html" class="view-all">
-          VIEW ALL RELEASES
-          <svg viewBox="0 0 8 12"><path d="M1 1l5 5-5 5" /></svg>
+      </div>
+    </div>
+  </div>
+  <div class="hero__controls">
+    <button class="hero__prev" id="hero-prev" aria-label="Slide trước">‹</button>
+    <div class="hero__dots" id="hero-dots">
+      <button class="hero__dot active"></button>
+      <button class="hero__dot"></button>
+      <button class="hero__dot"></button>
+    </div>
+    <button class="hero__next" id="hero-next" aria-label="Slide tiếp">›</button>
+  </div>
+</section>
+
+<!-- ===== MARQUEE STRIP ===== -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>📚 Miễn phí vận chuyển đơn từ 299K</span>
+    <span>⭐ Hơn 50,000 đầu sách</span>
+    <span>🔖 Giảm 15% đơn hàng đầu tiên</span>
+    <span>📦 Giao hàng trong 24h tại Hà Nội &amp; TP.HCM</span>
+    <span>💎 Thành viên VIP ưu đãi mỗi ngày</span>
+    <span>📚 Miễn phí vận chuyển đơn từ 299K</span>
+    <span>⭐ Hơn 50,000 đầu sách</span>
+    <span>🔖 Giảm 15% đơn hàng đầu tiên</span>
+    <span>📦 Giao hàng trong 24h tại Hà Nội &amp; TP.HCM</span>
+    <span>💎 Thành viên VIP ưu đãi mỗi ngày</span>
+  </div>
+</div>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section categories-section">
+  <div class="container">
+    <div class="section-header aos-fade-up">
+      <span class="section-tag">Danh Mục</span>
+      <h2>Khám Phá Theo <em>Thể Loại</em></h2>
+    </div>
+    <div class="categories-grid">
+      <a href="catalog.html?cat=van-hoc" class="category-card aos-fade-up" style="--delay:0.1s">
+        <div class="category-card__icon">📖</div>
+        <h3>Văn Học</h3>
+        <span>1,200+ sách</span>
+      </a>
+      <a href="catalog.html?cat=kinh-te" class="category-card aos-fade-up" style="--delay:0.2s">
+        <div class="category-card__icon">💼</div>
+        <h3>Kinh Tế</h3>
+        <span>850+ sách</span>
+      </a>
+      <a href="catalog.html?cat=khoa-hoc" class="category-card aos-fade-up" style="--delay:0.3s">
+        <div class="category-card__icon">🔬</div>
+        <h3>Khoa Học</h3>
+        <span>640+ sách</span>
+      </a>
+      <a href="catalog.html?cat=tam-ly" class="category-card aos-fade-up" style="--delay:0.4s">
+        <div class="category-card__icon">🧠</div>
+        <h3>Tâm Lý Học</h3>
+        <span>420+ sách</span>
+      </a>
+      <a href="catalog.html?cat=thieu-nhi" class="category-card aos-fade-up" style="--delay:0.5s">
+        <div class="category-card__icon">🌟</div>
+        <h3>Thiếu Nhi</h3>
+        <span>980+ sách</span>
+      </a>
+      <a href="catalog.html?cat=lich-su" class="category-card aos-fade-up" style="--delay:0.6s">
+        <div class="category-card__icon">🏛️</div>
+        <h3>Lịch Sử</h3>
+        <span>380+ sách</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW ARRIVALS ===== -->
+<section class="section" id="new-arrivals">
+  <div class="container">
+    <div class="section-header aos-fade-up">
+      <span class="section-tag">Mới Nhất</span>
+      <h2>Sách Mới <em>Vừa Về</em></h2>
+      <a href="catalog.html?sort=newest" class="section-more">Xem tất cả →</a>
+    </div>
+    <div class="books-grid" id="new-books-grid">
+      <!-- JS populated -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== BESTSELLERS ===== -->
+<section class="section section--dark" id="bestsellers">
+  <div class="container">
+    <div class="section-header aos-fade-up">
+      <span class="section-tag">Bestseller</span>
+      <h2>Bán Chạy <em>Nhất Tuần</em></h2>
+      <a href="catalog.html?sort=bestseller" class="section-more">Xem tất cả →</a>
+    </div>
+    <div class="books-grid" id="bestseller-grid">
+      <!-- JS populated -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOTIONS BANNER ===== -->
+<section class="section promo-section" id="promotions">
+  <div class="container">
+    <div class="promo-grid">
+      <div class="promo-card promo-card--large aos-fade-up">
+        <div class="promo-card__content">
+          <span class="promo-badge">FLASH SALE</span>
+          <h3>Giảm 40%<br/>Sách Văn Học</h3>
+          <p>Chỉ còn 24 giờ</p>
+          <a href="catalog.html?filter=sale&cat=van-hoc" class="btn btn--gold">Mua Ngay</a>
+        </div>
+        <div class="promo-card__countdown" id="countdown"></div>
+      </div>
+      <div class="promo-stack">
+        <div class="promo-card promo-card--small aos-fade-up" style="--delay:0.2s">
+          <span class="promo-badge promo-badge--blue">MỚI</span>
+          <h4>Combo 3 Sách<br/>Chỉ 199K</h4>
+          <a href="catalog.html?filter=combo">Xem ngay →</a>
+        </div>
+        <div class="promo-card promo-card--small aos-fade-up" style="--delay:0.3s">
+          <span class="promo-badge promo-badge--green">MIỄN PHÍ</span>
+          <h4>Ship Toàn Quốc<br/>Đơn Từ 299K</h4>
+          <a href="catalog.html">Mua sắm →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED AUTHOR ===== -->
+<section class="section author-section">
+  <div class="container">
+    <div class="author-feature aos-fade-up">
+      <div class="author-feature__text">
+        <span class="section-tag">Tác Giả Nổi Bật</span>
+        <h2>Nguyễn Nhật <em>Ánh</em></h2>
+        <p class="author-quote">"Đọc sách là một cuộc phiêu lưu không bao giờ kết thúc..."</p>
+        <p>Tác giả của hàng loạt tác phẩm kinh điển, người bạn đồng hành của biết bao thế hệ độc giả Việt Nam.</p>
+        <a href="catalog.html?author=nguyen-nhat-anh" class="btn btn--outline">Xem Tác Phẩm</a>
+      </div>
+      <div class="author-feature__books" id="author-books">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG PREVIEW ===== -->
+<section class="section section--dark blog-section">
+  <div class="container">
+    <div class="section-header aos-fade-up">
+      <span class="section-tag">Blog Sách</span>
+      <h2>Điểm Sách & <em>Review</em></h2>
+      <a href="blog.html" class="section-more">Xem tất cả →</a>
+    </div>
+    <div class="blog-grid" id="blog-grid">
+      <!-- JS populated -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="section newsletter-section">
+  <div class="container">
+    <div class="newsletter-box aos-fade-up">
+      <div class="newsletter-box__text">
+        <h2>Đăng Ký Nhận <em>Tin Mới</em></h2>
+        <p>Nhận thông báo sách mới, ưu đãi độc quyền mỗi tuần</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Nhập email của bạn..." required />
+        <button type="submit" class="btn btn--gold">Đăng Ký</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__icon">📚</span>
+          <span class="logo__text">Tủ Sách <em>Vàng</em></span>
         </a>
-      </div>
-      <div class="products-grid">
-        <!-- Product 1 -->
-        <div
-          class="product-card"
-          onclick="window.location.href = 'product-detail.html'"
-          style="cursor: pointer"
-        >
-          <div class="product-image">
-            <img src="images/2.png" alt="RED PHANTOM 01" class="product-img" />
-            <div class="product-wishlist" onclick="event.stopPropagation()">
-              <svg viewBox="0 0 20 18">
-                <path
-                  d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
-                />
-              </svg>
-            </div>
-            <div
-              class="product-add-btn"
-              onclick="
-                event.stopPropagation();
-                window.location.href = 'checkout.html';
-              "
-            >
-              ADD TO CART
-            </div>
-          </div>
-          <div class="product-info">
-            <div class="product-name-price">
-              <span class="product-name">RED PHANTOM 01</span>
-              <span class="product-price">$180.00</span>
-            </div>
-            <div class="product-meta">Running • 2 Colors</div>
-          </div>
+        <p>Không gian sách dành cho những tâm hồn yêu tri thức và văn chương.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" class="social-btn">f</a>
+          <a href="#" aria-label="Instagram" class="social-btn">in</a>
+          <a href="#" aria-label="YouTube" class="social-btn">yt</a>
+          <a href="#" aria-label="TikTok" class="social-btn">tk</a>
         </div>
+      </div>
+      <div class="footer__col">
+        <h4>Danh Mục</h4>
+        <a href="catalog.html?cat=van-hoc">Văn Học</a>
+        <a href="catalog.html?cat=kinh-te">Kinh Tế</a>
+        <a href="catalog.html?cat=khoa-hoc">Khoa Học</a>
+        <a href="catalog.html?cat=tam-ly">Tâm Lý Học</a>
+        <a href="catalog.html?cat=thieu-nhi">Thiếu Nhi</a>
+      </div>
+      <div class="footer__col">
+        <h4>Hỗ Trợ</h4>
+        <a href="#">Chính Sách Đổi Trả</a>
+        <a href="#">Hướng Dẫn Đặt Hàng</a>
+        <a href="#">Phương Thức Thanh Toán</a>
+        <a href="#">Theo Dõi Đơn Hàng</a>
+        <a href="#">Liên Hệ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Liên Hệ</h4>
+        <p>📍 123 Đinh Tiên Hoàng, Q.1, TP.HCM</p>
+        <p>📞 1800-1234 (Miễn phí)</p>
+        <p>✉️ hello@tusachvang.vn</p>
+        <p>🕐 8:00 - 22:00 mỗi ngày</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Tủ Sách Vàng. Bảo lưu mọi quyền.</p>
+      <div class="payment-icons">
+        <span class="payment-icon">VNPAY</span>
+        <span class="payment-icon">MoMo</span>
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">COD</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
-        <!-- Product 2 -->
-        <div
-          class="product-card"
-          onclick="window.location.href = 'product-detail.html'"
-          style="cursor: pointer"
-        >
-          <div class="product-image">
-            <img src="images/3.png" alt="SOLAR FLARE HI" class="product-img" />
-            <div class="product-badge"><span>LIMITED</span></div>
-            <div class="product-wishlist">
-              <svg viewBox="0 0 20 18">
-                <path
-                  d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
-                />
-              </svg>
-            </div>
-            <div
-              class="product-add-btn"
-              onclick="
-                event.stopPropagation();
-                window.location.href = 'checkout.html';
-              "
-            >
-              ADD TO CART
-            </div>
-          </div>
-          <div class="product-info">
-            <div class="product-name-price">
-              <span class="product-name">SOLAR FLARE HI</span>
-              <span class="product-price">$210.00</span>
-            </div>
-            <div class="product-meta">Basketball • 1 Color</div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img
-              src="images/4.png"
-              alt="NOVA GLIDE WHITE"
-              class="product-img"
-            />
-            <div class="product-wishlist">
-              <svg viewBox="0 0 20 18">
-                <path
-                  d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"
-                />
-              </svg>
-            </div>
-            <div
-              class="product-add-btn"
-              onclick="
-                event.stopPropagation();
-                window.location.href = 'checkout.html';
-              "
-            >
-              ADD TO CART
-            </div>
-          </div>
-          <div class="product-info">
-            <div class="product-name-price">
-              <span class="product-name">NOVA GLIDE WHITE</span>
-              <span class="product-price">$165.00</span>
-            </div>
-            <div class="product-meta">Lifestyle • 4 Colors</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-      <div class="newsletter-bg"></div>
-      <div class="newsletter-content">
-        <div class="newsletter-text">
-          <h2>DON'T MISS THE NEXT DROP</h2>
-          <p>
-            Be the first to know about limited edition releases and members-only
-            events.
-          </p>
-        </div>
-        <form class="newsletter-form">
-          <input
-            type="email"
-            class="newsletter-input"
-            placeholder="Email Address"
-          />
-          <button type="submit" class="newsletter-btn">JOIN</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-icon">
-              <svg viewBox="0 0 14 17">
-                <path d="M7 0L0 3.5v7l7 3.5 7-3.5v-7L7 0z" />
-              </svg>
-            </div>
-            <span class="footer-logo-text">SOLE.VN</span>
-          </div>
-          <p class="footer-description">
-            Premier destination for futuristic high-performance footwear. We
-            bridge the gap between cyberpunk aesthetics and world-class athletic
-            engineering.
-          </p>
-          <div class="footer-social">
-            <a href="#" class="social-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                />
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                />
-              </svg>
-            </a>
-            <a href="#" class="social-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-column">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="#">New Releases</a></li>
-            <li><a href="#">Basketball</a></li>
-            <li><a href="#">Running</a></li>
-            <li><a href="#">Lifestyle</a></li>
-            <li><a href="#">Training</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Shipping Info</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-            <li><a href="#">Payment Options</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span class="footer-copyright">© 2024 SOLE.VN INTERNATIONAL LTD.</span>
-        <div class="footer-links">
-          <a href="#">COOKIES</a>
-          <a href="#">AD CHOICE</a>
-          <a href="#">TERMS</a>
-        </div>
-      </div>
-    </footer>
-  </body>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/search.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
